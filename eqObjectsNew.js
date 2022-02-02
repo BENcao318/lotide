@@ -14,6 +14,17 @@ const eqObjects = function(object1, object2) {
     return false;
   };
 
+  // for(let key1 of keys1) {
+  //   if(object2[key1]) {
+  //     if(Array.isArray(object2[key1]) && Array.isArray(object1[key1])) {
+  //       if(!eqArrays(object2[key1], object1[key1])) return false;
+  //     } else if(object2[key1] !== object1[key1]) return false;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  // return true;
+
   keys1.forEach(key1 => {
     if(object2[key1]){
       if(!Array.isArray(object1[key1]) && typeof object1[key1] === 'object') {
@@ -27,6 +38,7 @@ const eqObjects = function(object1, object2) {
       return false;
     }
   });
+  
   return true;
 }
 
@@ -34,20 +46,7 @@ const eqArrays = function(arr1, arr2) {
   return arr1.toString() === arr2.toString();
 }
 
-
-
 // TEST CODE
-
-
-// assertEqual("Lighthouse Labs", "Lighthouse Labs");
-// assertEqual(1, 1);
-
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// console.log(eqObjects(ab, ba)); // => true
-
-// const abc = { a: "1", b: "2", c: "3" };
-// console.log(eqObjects(ab, abc)); // => false
 
 const cd = { a: { z: 1, b: {a: 3} }, b: 2, c: [1, 2, 3]};
 // const cd = { a: { y: 0, z: 1 }, b: 2 };
