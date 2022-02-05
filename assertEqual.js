@@ -5,9 +5,12 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+const benGetRich = true;
 
 
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 1);
+
+
+module.exports = assertEqual;
+
+// console.log(module)
