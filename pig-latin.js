@@ -16,3 +16,5 @@ for(let arg of args) {
 }
 
 console.log(string);
+
+module.exports = pigLatin;

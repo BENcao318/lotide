@@ -24,3 +24,5 @@ const countLetters = function(string) {
 // assertEqual("Lighthouse Labs", "Lighthouse Labs");
 // assertEqual(1, 1);
 console.log(countLetters('letter'));
+
+module.exports = countLetters;

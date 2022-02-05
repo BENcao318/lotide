@@ -12,3 +12,5 @@ const reverse = function(str) {
 for(let arg of args) {
   console.log(reverse(arg));
 }
+
+module.exports = reverse;

@@ -47,3 +47,14 @@ assertArraysEqual(letterPositions("hello Ben")["l"], [2, 3]);
 assertArraysEqual(letterPositions("hello Ben")["o"], [4]);
 assertArraysEqual(letterPositions("hello Ben")["B"], [6]);
 assertArraysEqual(letterPositions("hello Ben")["n"], [8]);
+
+
+
+
+
+
+
+
+
+
+module.exports = letterPositions;

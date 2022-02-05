@@ -32,3 +32,5 @@ let obj1 = {
 
 assertEqual(findKey(obj1, x => x.stars === 2), "noma");
 assertEqual(findKey(obj1, x => x.stars > 2), "Akaleri");
+
+module.exports = findKey;
