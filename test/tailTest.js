@@ -1,22 +1,21 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
 // TEST CODE
-// assertEqual("Lighthouse Labs", "Lighthouse Labs");
-// assertEqual(1, 1);
-let result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it("returns [\"Lighthouse\", \"Labs\"] for [\"Hello\", \"Lighthouse\", \"Labs\"]", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"])
+  });
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 2);
+  it("returns ['Yo Yo', 'Lighthouse'] for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Yo Yo', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs'])
+  });
 
-result = tail(["Labs"]);
-assertEqual(result.length, 0); // ensure we get back zero element
-assertEqual(result[0], undefined); // ensure first element is undefined
+  it("returns [] for ['labs']", () => {
+    assert.deepEqual(tail(['Labs']), [])
+  });
 
-result = tail([]);
-assertEqual(result.length, 0); // ensure we get back zero element
-assertEqual(result[0], undefined); // ensure first element is undefined
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), [])
+  });
+})
