@@ -1,3 +1,6 @@
+/*
+Find the middle element in the array argument and return the result
+*/
 const middle = function(array) {
   let result = [];
   let length = array.length;

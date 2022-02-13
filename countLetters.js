@@ -1,28 +1,18 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+/*
+Count the number of letters  inside the string argument and return the result
+*/
 const countLetters = function(string) {
   let result = {};
 
   for(let char of string) {
     if(result[char]) {
       result[char] += 1;
-    } else {
+    } else if(char !== ' '){
       result[char] = 1;
     }
   }
 
   return result;
 }
-
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Lighthouse Labs");
-// assertEqual(1, 1);
-console.log(countLetters('letter'));
 
 module.exports = countLetters;

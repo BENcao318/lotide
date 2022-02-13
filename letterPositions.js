@@ -1,3 +1,6 @@
+/*
+Index all the letter positions in the provided sentence argument and return the result as an object
+*/
 const letterPositions = function(sentence) {
   const results = {};
 
@@ -13,14 +16,5 @@ const letterPositions = function(sentence) {
   
   return results;
 }
-
-
-
-
-
-
-
-
-
 
 module.exports = letterPositions;

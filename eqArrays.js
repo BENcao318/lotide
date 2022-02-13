@@ -1,4 +1,10 @@
+/*
+Compare the two array arguments with each other and return the result
+*/
 const eqArrays = function(arr1, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false;
+  } 
   for(let i = 0; i < arr1.length; i++) {
     if(Array.isArray(arr1[i]) && Array.isArray(arr2[i])){
       if(arr1[i].length !== arr2[i].length) {
@@ -10,7 +16,5 @@ const eqArrays = function(arr1, arr2) {
   }
   return true;
 }
-
-
 
 module.exports = eqArrays;

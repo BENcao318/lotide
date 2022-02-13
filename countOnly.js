@@ -1,3 +1,6 @@
+/*
+Count the number of items in the array argument based on the itemsToCount(object), then return the result as an object
+*/
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
@@ -13,6 +16,5 @@ const countOnly = function(allItems, itemsToCount) {
 
   return results;
 }
-
 
 module.exports = countOnly;

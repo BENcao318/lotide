@@ -20,6 +20,7 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 // eqObjects(cd, dc); // => true
 // eqObjects(cd, cd2); // => false
 
+
 describe('#eqObjects', () => {
   it("returns true for { a: \"1\", b: \"2\" } and { b: \"2\", a: \"1\" }", () => {
     assert.strictEqual(eqObjects(ab, ba), true);

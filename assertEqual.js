@@ -1,3 +1,6 @@
+/*
+Compare the two arguments with each other and log the result
+*/
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,11 +9,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
-
-
-
-
 module.exports = assertEqual;
-
-// console.log(module)

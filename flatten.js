@@ -1,3 +1,6 @@
+/*
+Flatten the nestedArray argument to 1D-array and return the result
+*/
 const flatten = function(nestedArray) {
   let flattenedArray = [];
 
